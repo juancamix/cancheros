@@ -1,5 +1,14 @@
 # Getting Started with Create React App
 
+# Installation of libraries 
+
+For the installation of the libreries is important `NPM`
+
+- MAP: leaftlet = npm i leaflet and npm i react-leaflet
+- EXPRESS: node.js = npm i express
+- DATE-FNS: date = npm i date-fns
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
