@@ -10,9 +10,7 @@ const Navbar = () => {
             
             <div className="logoContainer">
                 <Link className="Home" to="/">
-               <img src="https://res.cloudinary.com/dbenwgwfn/image/upload/v1684087408/Cancheros-Map/cancheros%20logos/WhatsApp_Image_2023-05-14_at_12.52.44_PM-removebg-preview_gv5eqv.png" alt="" className="logo" >
-               </img>
-
+               <img src="https://res.cloudinary.com/dbenwgwfn/image/upload/v1684087408/Cancheros-Map/cancheros%20logos/logo.png" alt="" className="logo" ></img>
                 </Link>
                 </div>
                 
