@@ -1,6 +1,11 @@
 import React, { useState } from 'react'
+
 import "./LogIn.css"
+import { Link, useNavigate} from 'react-router-dom';
+import { send } from '@emailjs/browser';
 export const MainLogin = () => {
+
+    const navigate =useNavigate()
 
     const [clas, setClas] = useState(false);
 
@@ -10,6 +15,10 @@ export const MainLogin = () => {
 
     const  putPanel = () =>{
         setClas(true)
+    }
+
+    const send = () =>{
+        navigate('/')
     }
 
 
@@ -34,7 +43,8 @@ return (
                 <h2> Iniciar Sesion</h2>
                 <input type="email" placeholder='Correo Electronico' required />
                 <input type="password" placeholder='Contraseña' required/>
-                <button> Entrar </button>
+                <button onClick={send}> Entrar
+                </button>
                 </form>
                 </div>
                 <div className={`contenedorRegister ${clas ? "newContent": ""}`}>
