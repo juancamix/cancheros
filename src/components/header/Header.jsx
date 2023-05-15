@@ -48,12 +48,12 @@ const handleSearch = ()=>{
             <div className={type ==="list" ? "headerContainer listMode": "headerContainer"}>
 
             <div className="headerList">
-                <div className="headerListItem active">
+                {/* <div className="headerListItem active">
                 <FontAwesomeIcon icon={faFutbol} />
                 <span>
                 <Link className="btn-Cancha" to=''>Canchas</Link>  
                 </span>
-                </div>
+                </div> */}
               
             </div>
             { type !== "list" &&

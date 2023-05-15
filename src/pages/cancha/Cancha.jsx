@@ -102,9 +102,9 @@ const Cancha = () => {
                             </div>
                         </div>
                     </div>
-                    <Map/>
                     
                 </div>
+                    <Map/>
             </div>
     )
 }
