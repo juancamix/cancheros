@@ -1,9 +1,21 @@
 
 import { Link } from "react-router-dom"
 import "./navbar.css"
+import Modal from "../Modal/Modal"
+import { useState } from "react";
+import { MainLogin } from "../../pages/LogIn/LogIn";
 
 const Navbar = () => {
 
+    const [modalOpen, setModalOpen] = useState(false);
+    
+    const openModal = () =>{
+        setModalOpen(true)
+    }
+    const closeModal = () =>{
+        setModalOpen(false)
+    }
+    
     return (
         <div className="navbar">
             <div className="navContainer">
@@ -15,9 +27,11 @@ const Navbar = () => {
                 </div>
                 
                <div className="navItems">
-               <button className="navButton">
-               <Link className='LinkLog' to='/LogIn'>Iniciar Sesión</Link>
-               </button>
+               <button className="navButton" onClick={openModal}>Inicio sesión</button>
+               <Modal isOpen={modalOpen} onClose={closeModal}>
+                    <MainLogin/>
+                    
+                </Modal> 
                </div>
             </div>
         </div>

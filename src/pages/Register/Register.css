@@ -1,0 +1,144 @@
+.ContainerRegis{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form1 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .title1 {
+    font-size: 28px;
+    color: #05850f;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  
+  .title1::before,.title1::after {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    left: 0px;
+    background-color: #05850f;
+  }
+  
+  .title1::before {
+    width: 18px;
+    height: 18px;
+    background-color: #3f8800;
+  }
+  
+  .title1::after {
+    width: 18px;
+    height: 18px;
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message1, .signin {
+    color: #585757d2;
+    font-size: 14px;
+  }
+  
+  .signin {
+    text-align: center;
+  }
+  
+  .signin a {
+    color: royalblue;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    width: 100%;
+    gap: 6px;
+  }
+  
+  .form1 .LabelInput {
+    position: relative;
+  }
+  
+  .form1 .LabelInput .input{
+    width: 100%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #69696965;
+    border-radius: 10px;
+  }
+  .form1 .LabelInput .input1{
+    width: 85%;
+    padding: 10px 10px 20px 10px;
+    outline: 0;
+    border: 1px solid #69696965;
+    border-radius: 10px;
+  }
+  
+  .form1 .LabelInput .input + .SpanRegis , .form1 .LabelInput .input1 + .SpanRegis{
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    color: #808080;
+    font-size: 0.9em;
+    cursor: text;
+    transition: 0.3s ease;
+  }
+  
+  .form1 .LabelInput .input:placeholder-shown + .SpanRegis, .form1 .LabelInput .input1:placeholder-shown + .SpanRegis{
+    top: 15px;
+    font-size: 0.9em;
+  }
+  
+  .form1 .LabelInput .input:focus + .SpanRegis,.form1 .LabelInput .input:valid + .SpanRegis,  .form1 .LabelInput .input1:focus + .SpanRegis,.form1 .LabelInput .input1:valid + .SpanRegis {
+    top: 30px;
+    font-size: 0.7em;
+    font-weight: 600;
+  }
+
+  
+  .form1 .LabelInput .input:valid + .SpanRegis, .form1 .LabelInput .input1:valid + .SpanRegis{
+    color: #3f8800;
+  }
+  
+  .submit {
+    border: none;
+    outline: none;
+    background-color: #3f8800;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+  }
+  
+  .submit:hover {
+    background-color: #05850f;
+  }
+  
+  @keyframes pulse {
+    from {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+  
+    to {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
