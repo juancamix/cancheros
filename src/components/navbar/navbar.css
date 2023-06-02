@@ -17,6 +17,7 @@ justify-content: space-between;
 .logoContainer{
     display: flex;
     max-width: 200px;
+    margin-top: 1%;
 }
 
 .logo{

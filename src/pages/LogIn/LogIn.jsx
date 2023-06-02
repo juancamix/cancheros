@@ -1,10 +1,24 @@
 
 
-import { Link } from "react-router-dom"
+// import { Link } from "react-router-dom"
 import "./LogIn.css"
+import Modal from "../../components/Modal/Modal"
+import { Register } from "../Register/Register"
+import { useState } from "react";
+
+
 
 
 export const MainLogin = () => {
+
+	const [modalOpen, setModalOpen] = useState(false);
+    
+    const openModal = () =>{
+        setModalOpen(true)
+    }
+    const closeModal = () =>{
+        setModalOpen(false)
+    }
 
 return (
 	<>
@@ -38,7 +52,12 @@ return (
 
 	</div>
 	<p class="signup">¿No tienes una cuenta?
-		<Link to='/Register'> Registrate</Link>
+
+		<button className="" onClick={openModal}> Registrate</button>
+               <Modal isOpen={modalOpen} onClose={closeModal}>
+                    <Register/>
+                    
+                </Modal> 
 	</p>
 </div>
 	

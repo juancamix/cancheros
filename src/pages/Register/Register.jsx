@@ -1,17 +1,15 @@
 import React  from 'react'
 import './Register.css'
-import { LogoCont } from '../../components/LogoCont/LogoCont'
 
 export const Register = () => {
 
   return (
     <>
-    <LogoCont/>
     <div className='ContainerRegis'>
 
     <form class="form1">
     <p class="title1">Registrate </p>
-    <p class="message1">Signup now and get full access to our app. </p>
+    <p class="message1">Inicia sesión para tener acceso completo a la aplicación. </p>
         <div class="flex">
         <label className='LabelInput'>
             <input required="" placeholder="" type="text" class="input1"/>
