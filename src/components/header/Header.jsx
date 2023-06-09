@@ -7,10 +7,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import "./header.css"
 import { DateRange } from 'react-date-range';
 import { useState } from "react";
-import {useNavigate, Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
 import {format}from"date-fns";
+import { MainLogin } from "../../pages/LogIn/LogIn";
+import Modal from "../Modal/Modal";
+
 
 const Header = ({type}) => {
     const [ciudad, setCiudad] = useState ("");
@@ -43,6 +46,15 @@ const handleSearch = ()=>{
   navigate ("/canchas", { state: {ciudad,date,options}});
 };
 
+const [modalOpen, setModalOpen] = useState(false);
+    
+const openModal = () =>{
+    setModalOpen(true)
+}
+const closeModal = () =>{
+    setModalOpen(false)
+}
+
     return(
         <div className="header">
             <div className={type ==="list" ? "headerContainer listMode": "headerContainer"}>
@@ -60,9 +72,10 @@ const handleSearch = ()=>{
             <>
             <h1 className="headerTitle">El amor esta en la cancha.</h1>
             <p className="headerDesc">Reserva tú cancha - 10% de descuento si lo haces desde tú cuenta cancheros </p>
-            <button className="headerBtn">
-            <Link className='LinkLog1' to='/LogIn'>Iniciar Sesión / Registrarse</Link>
-            </button>
+            <button className="headerBtn" onClick={openModal}>Inicio sesión / Registrate</button>
+               <Modal isOpen={modalOpen} onClose={closeModal}>
+                    <MainLogin/>
+                </Modal> 
             
             <div className="headerSearch">
                 <div className="headerSearchItem">

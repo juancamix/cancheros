@@ -1,39 +1,29 @@
 
 
 // import { Link } from "react-router-dom"
-import "./LogIn.css"
+import "./LogInAdmin.css"
 import Modal from "../../components/Modal/Modal"
 import { Register } from "../Register/Register"
 import { useState } from "react";
-import { LoginAdmin } from "../LoginAdmin/LogInAdmin";
 
 
-export const MainLogin = () => {
 
-	const [modal1Open, setModal1Open] = useState(false);
-	const [modal2Open, setModal2Open] = useState(false);
-	const [modalContent, setModalContent] = useState('');
 
-    const openModal1 = (content) =>{
-		setModalContent(content)
-        setModal1Open(true)
+export const LoginAdmin = () => {
+
+	const [modalOpen, setModalOpen] = useState(false);
+    
+    const openModal = () =>{
+        setModalOpen(true)
     }
-    const closeModal1 = () =>{
-        setModal1Open(false)
+    const closeModal = () =>{
+        setModalOpen(false)
     }
-	const openModal2 = () => {
-		setModal2Open(true);
-	  };
-	
-	  const closeModal2 = () => {
-		setModal2Open(false);
-	  };
-
 
 return (
 	<>
 <div class="form-container">
-	<p class="title">Inicio sesión</p>
+	<p class="title">Inicio de sesión de administrador</p>
 	<form class="form">
 		<div class="input-group">
 			<label for="username">Nombre</label>
@@ -61,27 +51,17 @@ return (
 		</button>
 
 	</div>
-	<p class="signup">¿No tienes una cuenta?
+	<p class="signup">¿No tienes una cuenta de administrador?
 
-		<button className="register" onClick={openModal1}> Registrate</button>
-		
-               <Modal isOpen={modal1Open} onClose={closeModal1}>
+		<button className="register" onClick={openModal}> Registrate</button>
+               <Modal isOpen={modalOpen} onClose={closeModal}>
                     <Register/>
-                </Modal>
-		
-	</p>
-
-	<div className="line"></div>
-	<p class="signupAdmin" >¿Eres dueño de una cancha?
-		<button className="register" onClick={openModal2}> Inicia sesión</button>
-		
-			<Modal isOpen={modal2Open} onClose={closeModal2}>
-				{<LoginAdmin/>}
-			</Modal>
-
+                    
+                </Modal> 
 	</p>
 </div>
-
+	
 	</>
     )
 }
+    

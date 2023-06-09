@@ -120,21 +120,8 @@
   line-height: 1rem;
   color: #9ca3af;
 }
-.signupAdmin {
-  text-align: center;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  color: #9ca3af;
-}
 
 .register {
-  color: white;
-  border: none;
-  margin: 5px;
-  cursor: pointer;
-  background-color: #f4f4f400;
-}
-.LoginAdmin {
   color: white;
   border: none;
   margin: 5px;

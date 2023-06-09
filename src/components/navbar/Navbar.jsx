@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom"
+
 import "./navbar.css"
 import Modal from "../Modal/Modal"
 import { useState } from "react";
 import { MainLogin } from "../../pages/LogIn/LogIn";
+import { LogoCont } from "../LogoCont/LogoCont";
 
 const Navbar = () => {
 
@@ -18,12 +19,7 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="navContainer">
-            
-            <div className="logoContainer">
-                <Link className="Home" to="/">
-               <img src="https://res.cloudinary.com/dbenwgwfn/image/upload/v1684087408/Cancheros-Map/cancheros%20logos/logo.png" alt="" className="logo" ></img>
-                </Link>
-                </div>
+                <LogoCont/>
                 
                <div className="navItems">
                <button className="navButton" onClick={openModal}>Inicio sesión</button>

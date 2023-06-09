@@ -3,7 +3,7 @@ import "./canchasList.css"
 const CanchasList = () => {
     return (
         <div className="cList">
-            <div className="cListItem">
+            {/* <div className="cListItem">
                 <img src="https://fitforall.com.co/wp-content/uploads/2022/06/R6A2695-scaled.jpg" alt="" className="cListImg" />
                 <div className="cListTitles">
                     <h1>Cancha futbol 5</h1>
@@ -37,7 +37,7 @@ const CanchasList = () => {
                     <h1>Cancha futbol 11</h1>
                     <h2>2 canchas</h2>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
