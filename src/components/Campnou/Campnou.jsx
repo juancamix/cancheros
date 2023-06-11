@@ -1,5 +1,5 @@
 import React from 'react'
-import "./cancha.css"
+import "./Campnou.css"
 import Navbar from "../../components/navbar/Navbar"
 import Header from "../../components/header/Header"
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
@@ -55,7 +55,7 @@ const CheckoutForm = () =>{
 }
 
 
-const Cancha = () => {
+export const Campnou = () => {
     const [slideNumber, setSlideNumber, newSlideNumber] = useState (0);
     const [open, setOpen] = useState (false);
     const photos = [
@@ -119,17 +119,17 @@ const Cancha = () => {
                     <FontAwesomeIcon icon={faCircleArrowRight}className="arrow" onClick={()=>handleMove("r")}/>
                 </div>}
                 <div className="canchaWrapper">
-                    <h1 className="canchaTitle">Bernabeu</h1>
+                    <h1 className="canchaTitle">Campnou</h1>
                     {/* <button className="reservaAhora">Reservar ahora</button> */}
                     <div className="canchaAddress">
                         <FontAwesomeIcon icon={faLocationDot}/>
                         <span>...</span>
                     </div>
                     <span className="canchaDistance">
-                        Excelente localización - 500m from center
+                        Excelente localización - 50m del centro
                     </span>
                     <span className="canchaPriceHighlight">
-                        si alquila por más de 1 hora en esta cancha se le dara un descuento de un 5% en el proximo alquiler
+                        si alquila por más de 1 hora en esta cancha se le dara un descuento de un 2% en el proximo alquiler
                     </span>
                     <div className="canchaImages">
                         {photos.map((photo,i)=>(
@@ -141,10 +141,10 @@ const Cancha = () => {
                     <div className="canchaDetails">
                         <div className="canchaDetailsTexts">
                             <h1 className="canchaTitle">
-                                Bernabeu
+                                Campnou
                             </h1>
                             <p className="canchaDesc">
-                            Canchas Sintéticas Bernabeu, Armenia, Quindío, Colombia está ubicado en ..., Armenia, Quindío, Colombia, cerca de este lugar son: Gimnasio SuperGym (630 m), Centro Deportivo Mormones La Castellana (730 m), Edificio Castellana 9 A N 58 (976 m), Pulso Box armenia (1 km), GIMNASIO EQUILIBRIUM FITNESS (1 km).
+                            Canchas Sintéticas Campnou, Armenia, Quindío, Colombia está ubicado en Armenia, Quindío, Colombia, cerca de este lugar son: Gimnasio SuperGym (630 m), Centro Deportivo Mormones La Castellana (730 m), Edificio Castellana 9 A N 58 (976 m), Pulso Box armenia (1 km), GIMNASIO EQUILIBRIUM FITNESS (1 km).
 
                             </p>
                             </div>
@@ -154,7 +154,7 @@ const Cancha = () => {
                                 Cancha con • luces • tienda • gradas de puestos
                                 </span>
                                 <h2>
-                                    $90.000 (1 hora)
+                                    $95.000 (1 hora)
                                 </h2>
                                 <button className="btnrese" onClick={openModal}>Reservar</button>
                             </div>
@@ -180,4 +180,3 @@ const Cancha = () => {
     )
 }
 
-export default Cancha

@@ -33,7 +33,7 @@ const SearchItem = () => {
                 <span className="siPrice">$45.000</span>
                 <span className="siTextOp">Incluido petos y bolsas de agua</span>
                 <button className="siCheckButton">
-                <Link className="LinkCancha" to='/canchas/:id'>Mira disponibilidad</Link>
+                <Link className="LinkCancha" to='/canchaMUestra'>Mira disponibilidad</Link>
                 
                 </button>
             </div>
