@@ -6,12 +6,15 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faCircleArrowLeft, faCircleArrowRight, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons";
 import {useState} from "react";
-import { Map } from "../../components/Map/Map"
+// import { Map } from "../../components/Map/Map"
 import Modal from 'react-modal'
 import {AiOutlineCloseCircle} from 'react-icons/ai'
 import { loadStripe } from '@stripe/stripe-js'
 import { Elements, CardElement, useStripe, useElements} from '@stripe/react-stripe-js'
 import axios from 'axios'
+import { MapContainer, TileLayer, Marker, Popup} from "react-leaflet"
+import { Icon } from 'leaflet';
+import "leaflet/dist/leaflet.css"
 
 
 const stripePromise = loadStripe('pk_test_51NG6XgB439p1m1xwSpPezHZwMU1w00Eg2K7aK3qf92B9RoXHZcgIfmJfd8DDpjTOYNV7wfDkVGJkYAEN3zbQITU600cyjv6lC1')
@@ -106,6 +109,42 @@ export const SanSiro = () => {
     function closeModal() {
         setIsOpen(false);
     }
+    // MAP
+
+    const [mapCenter, setMapCenter] = useState([4.541025, -75.668547]);
+  
+      const markers = [
+          {
+            geocode: ([4.541025, -75.668547]),
+            popUp: "concede permiso para que sepamos donde esta ubicada la cancha"
+          }
+        ]
+        const customIcon = new Icon({
+          iconUrl: "https://res.cloudinary.com/dbenwgwfn/image/upload/v1682304566/Cancheros-Map/marcador-de-posicion_nrteik.png",
+          iconSize: [38, 38]
+        }
+        )
+        const getUserLocation = () => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(showUserLocation,handleLocationError);
+            } else {
+              alert('La geolocalización no es compatible en este navegador.');
+            }
+          };
+          const handleLocationError = (error) => {
+            console.error(error);
+            alert(
+              'Error al obtener la ubicación. Por favor, asegúrate de que has permitido el acceso a tu ubicación.'
+            );
+          };
+    
+          const showUserLocation = (position) => {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+        
+            setMapCenter([latitude, longitude]);
+          };
+        // FIN MAP
     return (
         <div>
             <Navbar/>
@@ -163,7 +202,30 @@ export const SanSiro = () => {
                     </div>
                     
                 </div>
-                    <Map/>
+                {/* MAP */}
+ 
+                <div className="Bg-Map">
+                    
+          <section className='Section-Map'>
+            <h1 className='h1main'>CONTACTO</h1>
+            <p>TELEFONO: 31728876756</p>
+            <p>CORREO: campnou@gmail.com</p>
+      </section>
+                
+      <MapContainer center={[4.541025, -75.668547]} zoom={20} style={{width: 400, height: 400}  }>
+    <TileLayer 
+    attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    url='https://tile.openstreetmap.org/{z}/{x}/{y}.png' 
+    />
+    {markers.map(marker => (
+        <Marker position={mapCenter} icon={customIcon}>
+        <Popup>{marker.popUp}</Popup>
+      </Marker>
+    ))}
+  </MapContainer>
+  <button onClick={getUserLocation}>Obtener ubicación</button>
+    </div>
+    {/* FIN MAP */}
                     <Modal 
 
                         isOpen={modalIsOpen}
