@@ -1,11 +1,13 @@
 import "./list.css"
+import  { ProductData } from "./ProductData"
 import Navbar from "../../components/navbar/Navbar"
 import Header from "../../components/header/Header"
-import SearchItem from "../../components/searchItem/SearchItem"
+// import SearchItem from "../../components/searchItem/SearchItem"
 import {useLocation} from "react-router-dom"
 import { useState } from "react";
 import {format} from "date-fns"
 import { DateRange } from "react-date-range";
+import Cards from "./Cards"
 
 const List = () => {
 
@@ -71,20 +73,38 @@ const List = () => {
                 </div>
                 <button>Buscar</button>
             </div>
-                <div className="listResult">
+              
+            <div className='App'>
+                {ProductData.map(contents => (
+                    <Cards 
+                        key={contents.id}
+                        image={contents.image}
+                        name={contents.name}
+                        desc={contents.desc}
+                        title={contents.title}
+                        parag1={contents.parag1}
+                        parag2={contents.parag2}
+                        cancel={contents.cancel}
+                        state={contents.state}
+                        rating={contents.rating}
+                        Price={contents.Price}
+                        parag3={contents.parag3}
+                        btndispo={contents.btndispo}
+                    />
+                ))}
+            </div>
+                    {/* <SearchItem/>
                     <SearchItem/>
                     <SearchItem/>
                     <SearchItem/>
                     <SearchItem/>
                     <SearchItem/>
                     <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/>
+                    <SearchItem/> */}
                 </div>
             </div>
         </div>
-        </div>
+        
     );
 };
 

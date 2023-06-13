@@ -141,6 +141,7 @@ export const SanSiro = () => {
           const showUserLocation = (position) => {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
+            console.log(latitude, longitude);
         
             setMapCenter([latitude, longitude]);
           };
@@ -205,11 +206,10 @@ export const SanSiro = () => {
                 {/* MAP */}
  
                 <div className="Bg-Map">
-                    
           <section className='Section-Map'>
             <h1 className='h1main'>CONTACTO</h1>
             <p>TELEFONO: 31728876756</p>
-            <p>CORREO: campnou@gmail.com</p>
+            <p>CORREO: SanSiro@gmail.com</p>
       </section>
                 
       <MapContainer center={[4.541025, -75.668547]} zoom={20} style={{width: 400, height: 400}  }>
