@@ -90,6 +90,7 @@ export const List = () => {
                         Price={contents.Price}
                         parag3={contents.parag3}
                         btndispo={contents.btndispo}
+                        link={contents.link}
                     />
                 ))}
             </div>

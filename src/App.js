@@ -12,6 +12,8 @@ import { Bernabeu } from "./components/Bernabeu/Bernabeu";
 import { Pasa1 } from "./components/Pasa1/Pasa1";
 import { Campnou } from "./components/Campnou/Campnou";
 import { SanSiro } from "./components/SanSiro/SanSiro";
+import { SanJose } from "./components/SanJose/SanJose";
+
 
 function App() {
   return (
@@ -26,6 +28,7 @@ function App() {
       <Route path="/CanchaCampnou" element={<Campnou/>}/>
       <Route path="/CanchaSanSiro" element={<SanSiro/>}/>
       <Route path="/PasarelaDePagos" element={<Pasa1/>}/>
+      <Route path="/canchaSanJose" element={<SanJose/>}/>
     </Routes>
     </BrowserRouter>
   );

@@ -29,6 +29,7 @@ export const ProductData = [
     //     timeLeft: 27,
     //     totalSales:7477
     // },
+    
     {
         id: 1,
         name: "campnou",
@@ -42,6 +43,7 @@ export const ProductData = [
         Price: "85.000",
         parag3: "Incluido petos y bolsas de agua",
         btndispo: "Mira disponibilidad",
+        link: "/CanchaCampNou",
         image: "https://res.cloudinary.com/dptohgiiu/image/upload/v1686078175/279863961_286630176889531_1468417031135548471_n_lsgzin.jpg"
     },
     {
@@ -57,6 +59,7 @@ export const ProductData = [
         Price: "50.000",
         parag3: "Incluido petos y bolsas de agua",
         btndispo: "Mira disponibilidad",
+        link: "/CanchaBernabeu",
         image: "https://res.cloudinary.com/dptohgiiu/image/upload/v1686076930/C20KiJ-WIAAjDPs_r0c1qt.jpg"
     },
     {
@@ -72,6 +75,23 @@ export const ProductData = [
         Price: "50.000",
         parag3: "Incluido petos y bolsas de agua",
         btndispo: "Mira disponibilidad",
+        link: "/CanchaSanSiro",
+        image: "https://www.metegol.app/static/cd530e997927a7da4f153545f4c0b3c7/6ff2f/SoccerFields%252F8DTnKjrtQQBSm3NrowAc%252F3eb0c5bb-2abb-4d95-bee9-b48ef8b4886a.jpg"
+    },
+    {
+        id: 4,
+        name: "San Jose",
+        desc: "10% de descuento dia lunes",
+        title: "Cancha futbol 5",
+        parag1: "Cancha con reja • luces • tienda • gradas de 20 puestos",
+        parag2: "puede cancelar más tarde, así que asegure este excelente precio hoy!",
+        cancel: "Cancelación gratuita",
+        state: "Excelente",
+        rating: 5,
+        Price: "50.000",
+        parag3: "Incluido petos y bolsas de agua",
+        btndispo: "Mira disponibilidad",
+        link: "/CanchaSanJose",
         image: "https://www.metegol.app/static/cd530e997927a7da4f153545f4c0b3c7/6ff2f/SoccerFields%252F8DTnKjrtQQBSm3NrowAc%252F3eb0c5bb-2abb-4d95-bee9-b48ef8b4886a.jpg"
     },
 ];

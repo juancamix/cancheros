@@ -63,7 +63,7 @@ const Cards = (props) => {
             <span className="siPrice">${props.Price}</span>
             <span className="siTextOp">{props.parag3}</span>
             <button className="siCheckButton">
-            <Link className="LinkCancha" to='/canchaMUestra'>{props.btndispo}</Link>
+            <Link className="LinkCancha" to={props.link}>{props.btndispo}</Link>
             
             </button>
         </div>
