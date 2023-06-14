@@ -1,4 +1,4 @@
-import "./List.css"
+import "./list.css"
 import  { ProductData } from "./ProductData"
 import Navbar from "../../components/navbar/Navbar"
 import Header from "../../components/header/Header"
