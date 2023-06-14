@@ -16,7 +16,7 @@ const FeaturedCanchas = () =>{
             </div>
             <div className="fcItem">
             <img src="https://res.cloudinary.com/dptohgiiu/image/upload/v1686079029/148617368_233389985098350_1076009393008847451_n_lrwxcf.jpg" alt="" className="fcImg" />
-            <span className="fcName"> Canca Gol Center</span>
+            <span className="fcName"> Cancha Gol Center</span>
             <span className="fcDireccion"> Calle 12 #21</span>
             <span className="fcPrice"> hora $40.000</span>
             <div className="fcRating">

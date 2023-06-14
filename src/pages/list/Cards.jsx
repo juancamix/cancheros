@@ -1,4 +1,4 @@
-import { FaShoppingCart, FaStar, FaRegBookmark, FaFireAlt } from "react-icons/fa";
+import {  FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import './Cards.css'
 
