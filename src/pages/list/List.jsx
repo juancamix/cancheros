@@ -1,4 +1,4 @@
-import "./list.css"
+import "./List.css"
 import  { ProductData } from "./ProductData"
 import Navbar from "../../components/navbar/Navbar"
 import Header from "../../components/header/Header"
@@ -9,13 +9,13 @@ import {format} from "date-fns"
 import { DateRange } from "react-date-range";
 import Cards from "./Cards"
 
-const List = () => {
+export const List = () => {
 
     const location = useLocation();
-    const [ciudad,setCiudad] = useState(location.state.ciudad);
+    const [ciudad,] = useState(location.state.ciudad);
     const [date,setDate] = useState(location.state.date);
     const [openDate,setOpenDate] = useState(false);
-    const [options,setOptions] = useState(location.state.options);
+    const [options,] = useState(location.state.options);
     return (
         <div>
         <Navbar/>
@@ -93,14 +93,7 @@ const List = () => {
                     />
                 ))}
             </div>
-                    {/* <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/>
-                    <SearchItem/> */}
+
                 </div>
             </div>
         </div>

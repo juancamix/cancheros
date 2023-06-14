@@ -4,7 +4,7 @@ import {
   Route,
  } from "react-router-dom";
 import Home from "./pages/home/Home";
-import List from "./pages/List/List";
+import List from "./pages/list/List";
 import Cancha from "./pages/cancha/Cancha";
 import { MainLogin } from "./pages/LogIn/LogIn";
 import { Register } from "./pages/Register/Register";
